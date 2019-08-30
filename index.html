@@ -46,29 +46,86 @@
       var input2 = document.getElementById("grid2").value
       var input3 = document.getElementById("grid3").value
       var firstChar1 = input1.charAt(0)
-      var secondChar1 = input1.charAt(1)
-      var firstChar2 = input1.charAt(0)
-      var secondChar2 = input1.charAt(1)
-      var firstChar3 = input1.charAt(0)
-      var secondChar3 = input1.charAt(1)
-      alert(firstChar1)
-      alert(secondChar1)
+      var secondChar1 = parseInt(input1.charAt(1)) - 1
+      var firstChar2 = input2.charAt(0)
+      var secondChar2 = parseInt(input2.charAt(1)) - 1
+      var firstChar3 = input3.charAt(0)
+      var secondChar3 = parseInt(input3.charAt(1)) - 1
       // alert(input3)
 
       var gridTable = [
-        [9, 0],
-        ['M', 'N']
+        [9, 0, 'R', 'X', 0, 'E', 'W', 'J', 'W', 4],
+        ['M', 'N', 'M', 'E', 5, 5, 9, 'Q', 'F', 'K'],
+        ['N', 'Q', 'T', 'J', 'D', 4, 2, 0, 'J', 'R'],
+        [9, 'P', 2, 'N', 'P', 2, 4, 0, 1, 'T'],
+        ['X', 'D', 0, 'E', 'V', 9, 5, 8, 'Y', 'V']
       ];
       if (firstChar1.toUpperCase() == 'A') {
         firstChar1 = 0
-        firstChar2 = 0
-        firstChar3 = 0
-      } else if (irstChar1.toUpperCase() == 'B') {
-        firstChar1 = 0
-        firstChar2 = 0
-        firstChar3 = 0
+      } else if (firstChar1.toUpperCase() == 'B') {
+        firstChar1 = 1
+      } else if (firstChar1.toUpperCase() == 'C') {
+        firstChar1 = 2
+      } else if (firstChar1.toUpperCase() == 'D') {
+        firstChar1 = 3
+      } else if (firstChar1.toUpperCase() == 'E') {
+        firstChar1 = 4
+      } else if (firstChar1.toUpperCase() == 'F') {
+        firstChar1 = 5
+      } else if (firstChar1.toUpperCase() == 'G') {
+        firstChar1 = 6
+      } else if (firstChar1.toUpperCase() == 'H') {
+        firstChar1 = 7
+      } else if (firstChar1.toUpperCase() == 'I') {
+        firstChar1 = 8
+      } else if (firstChar1.toUpperCase() == 'J') {
+        firstChar1 = 9
       }
-      document.getElementById("grid1").value = gridTable[firstChar1][secondChar1];
+      if (firstChar2.toUpperCase() == 'A') {
+        firstChar2 = 0
+      } else if (firstChar2.toUpperCase() == 'B') {
+        firstChar2 = 1
+      } else if (firstChar2.toUpperCase() == 'C') {
+        firstChar2 = 2
+      } else if (firstChar2.toUpperCase() == 'D') {
+        firstChar2 = 3
+      } else if (firstChar2.toUpperCase() == 'E') {
+        firstChar2 = 4
+      } else if (firstChar2.toUpperCase() == 'F') {
+        firstChar2 = 5
+      } else if (firstChar2.toUpperCase() == 'G') {
+        firstChar2 = 6
+      } else if (firstChar2.toUpperCase() == 'H') {
+        firstChar2 = 7
+      } else if (firstChar2.toUpperCase() == 'I') {
+        firstChar2 = 8
+      } else if (firstChar2.toUpperCase() == 'J') {
+        firstChar2 = 9
+      }
+      if (firstChar3.toUpperCase() == 'A') {
+        firstChar3 = 0
+      } else if (firstChar3.toUpperCase() == 'B') {
+        firstChar3 = 1
+      } else if (firstChar3.toUpperCase() == 'C') {
+        firstChar3 = 2
+      } else if (firstChar3.toUpperCase() == 'D') {
+        firstChar3 = 3
+      } else if (firstChar3.toUpperCase() == 'E') {
+        firstChar3 = 4
+      } else if (firstChar3.toUpperCase() == 'F') {
+        firstChar3 = 5
+      } else if (firstChar3.toUpperCase() == 'G') {
+        firstChar3 = 6
+      } else if (firstChar3.toUpperCase() == 'H') {
+        firstChar3 = 7
+      } else if (firstChar3.toUpperCase() == 'I') {
+        firstChar3 = 8
+      } else if (firstChar3.toUpperCase() == 'J') {
+        firstChar3 = 9
+      }
+      document.getElementById("grid1").value = gridTable[secondChar1][firstChar1];
+      document.getElementById("grid2").value = gridTable[secondChar2][firstChar2];
+      document.getElementById("grid3").value = gridTable[secondChar3][firstChar3];
     }
   </script>
 
