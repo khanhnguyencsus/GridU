@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+</head>
+<body>
+Name: <input type="text" id="myText" value="Mickey">
+<p>Date: <input type="text" id="datepicker"></p>
+<p>Array: <input type="text" id="khanh"></p>
+<button onclick="myFunction()">Try it</button>
+<button onclick="myFunction()">Try it 2</button>
+<script>
+function myFunction() {
+  document.getElementById("myText").value = document.getElementById("datepicker").value;
+}
+</script>
+<script>
+function myFunction() {
+  var activities = [
+      ['Work', 9],
+      ['Eat', 2],
+      ['Commute', 2],
+      ['Play Game', 2],
+      ['Sleep', 7]
+  ];
+document.getElementById("khanh").value = activities[0][1];
+}
+</script>
+
+</body>
+</html>
