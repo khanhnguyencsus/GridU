@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
+  <title>Khanh Nguyen Web App</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Grid Unlock</a>
+    <a class="navbar-brand" href="#">Unlock 2FA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,10 +36,46 @@
       </form>
     </div>
   </nav>
-<button type="button" class="btn btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Magic</button>
+  <label> Grid 1: <input type="text" id="grid1"> </label>
+  <label> Grid 2: <input type="text" id="grid2"> </label>
+  <label> Grid 3: <input type="text" id="grid3"> </label>
+      <button type="button" class="btn btn-outline-danger btn btn-secondary btn-lg" onclick="unlock()">Magic</button>
+  <script>
+    function unlock() {
+      var input1 = document.getElementById("grid1").value
+      var input2 = document.getElementById("grid2").value
+      var input3 = document.getElementById("grid3").value
+      var firstChar1 = input1.charAt(0)
+      var secondChar1 = input1.charAt(1)
+      var firstChar2 = input1.charAt(0)
+      var secondChar2 = input1.charAt(1)
+      var firstChar3 = input1.charAt(0)
+      var secondChar3 = input1.charAt(1)
+      alert(firstChar1)
+      alert(secondChar1)
+      // alert(input3)
+
+      var gridTable = [
+        [9, 0],
+        ['M', 'N']
+      ];
+      if (firstChar1.toUpperCase() == 'A') {
+        firstChar1 = 0
+        firstChar2 = 0
+        firstChar3 = 0
+      } else if (irstChar1.toUpperCase() == 'B') {
+        firstChar1 = 0
+        firstChar2 = 0
+        firstChar3 = 0
+      }
+      document.getElementById("grid1").value = gridTable[firstChar1][secondChar1];
+    }
+  </script>
+
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
